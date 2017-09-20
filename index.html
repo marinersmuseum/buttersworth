@@ -1,0 +1,113 @@
+<!--
+Using Microsoft's Pointer Events W3C proposal, rolled into the Hand.js library to unify touch, pen, and mouse event handling
+Read more:  http://www.w3.org/TR/pointerevents/
+Download:  http://handjs.codeplex.com/
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- icons -->
+        <link rel="shortcut icon" href="img/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="img/icons/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="img/icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="img/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-TileImage" content="img/icons/mstile-144x144.png">
+        <meta name="msapplication-config" content="img/icons/browserconfig.xml">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Exhibition Fonts -->                                                                           <!-- -->
+        <link href='fonts/MinionPro-Semibold/MinionPro-Semibold.css' rel='stylesheet' type='text/css'>      <!-- Minion Pro Semibold -->
+        <link href='fonts/MinionPro-Medium/MinionPro-Medium.css' rel='stylesheet' type='text/css'>          <!-- Minion Pro Medium -->
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <section id="content">
+            <!-- Lets make a simple image magnifier -->
+            <div class="magnify">
+
+                <div id="buttersworth"></div>
+                
+                <!-- This is the magnifying glass which will contain the original/large version -->
+                <div class="large"></div>
+                
+                <!-- This is the small image -->
+                <img class="small" src="img/imagemap.jpg" />
+
+                <div class="hotspots">
+                    <div>
+                        <a href="javascript:void(0)" class="p1" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Background features</strong>&ldquo;I often use well-known landmarks in my paintings. This is Castle Garden, at the tip of Manhattan. From 1855 to 1890, the Castle was America’s first official immigration center.&rdquo;</p>
+                        <b class="b1"></b>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="p2" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Signature</strong>&ldquo;I don’t always sign my paintings, but when I do, I always sign it &lsquo;J E Buttersworth&rsquo;.&rdquo; </p>
+                        <b class="b2"></b>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="p3" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Sky &amp; Weather</strong>&ldquo;The sky features prominently in my paintings and sets the mood. I try to create interest and drama through the shape and structure of clouds, a broad range of colors, and the momentary effects of weather.  Sometimes I prefer stormy, overcast skies, other times clear sunny days.&rdquo;</p>
+                        <b class="b3"></b>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="p4" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Seas &amp; Seagulls</strong>&ldquo;One of my most important skills is the ability to depict realistic seas. The sea is difficult to portray accurately because it’s always in motion and its look varies according to depth, wind and weather conditions, time of year, and the light in which it is viewed. Often I put a few seagulls around the water’s surface to keep your eye centered on the main part of the painting.&rdquo;</p>
+                        <b class="b4"></b>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="p5" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Composition</strong>&ldquo;Most of my paintings have a low horizon with the sea always in the foreground. This gives me more room to compose what I want and to also focus your attention on the vessels. In many of my paintings the most important vessels are closer to you, and the secondary craft often travel in different directions.&rdquo;</p>
+                        <b class="b5"></b>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="p6" rel="nofollow" aria-haspopup="false"></a>
+                        <p><strong>Meticulous Detail</strong>&ldquo;One of the hallmarks of my paintings is the accuracy with which I depict the vessels. Most of my paintings are commissions by ship and yacht owners who know their vessels intimately and expect them to be portrayed accurately.&rdquo;</p>
+                        <b class="b6"></b>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Lets load up prefixfree to handle CSS3 vendor prefixes -->
+        <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+        <!-- You can download it from http://leaverou.github.com/prefixfree/ -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/hand.minified-1.3.8.js" type="text/javascript"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
